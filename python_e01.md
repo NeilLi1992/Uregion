@@ -60,10 +60,53 @@ python my_file.py
 Note that sometimes interpreter may generate some intermediate files with extensions `.pyw` or `.pyc`, which are used to accelerate the execution when you run it next time. But they're safe to delete.
 
 ### 1.2. Basic Syntax
+Python syntax is designed to be close to natural English and highly readable. It has much fewer punctuations and syntactical constructions than other languages. In the meantime, Python is also famous for being strict in formatting, especially intendation. It uses indentation to indicate blocks for class, function definitions, or control flows, rather than use braces in many other languages.
 
-#### Comments
+All statements within the block must be indented with the same amount of spaces.
 
-#### Docstrings
+Statements can be separated into multi-lines using the line continuation character (\\):
+
+```
+# OK, separated into 3 lines 
+total = item_one + \
+		item_two + \
+		item_three
+```
+
+#### 1.2.1. Identifiers
+Identifiers are names used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (\_) followed by zero or more letters, underscores and digits (0 to 9).
+
+Below are some valid and invalid identifiers:
+```
+# valid identifiers
+a = 0
+Aa1 = 0
+_ = 0
+
+# invalid identifiers
+1ab = 0 # ERROR: can't start with number
+a@b = 0 # ERROR: ^ is not allowed
+
+```
+
+Python is also a case sensitive language, thus `name` and `Name` are two different identifiers.
+
+Some good naming conventions:
+
+* Class names start with an Uppercase letter. All other identifiers start with a lowercase letter.
+* Starting an identifier with a single leading underscore indicates that the identifier is private.
+* If the identifier also ends with two trailing underscores, the identifier is a language-defined special name.
+
+There're a list of reserved keywords, that cannot be used as identifiers, including `if`, `else`, `class`, `for`, etc. See a full list: https://www.tutorialspoint.com/python3/python_basic_syntax.htm.
+
+#### 1.2.2. Comments
+Python uses hash sign (\#) to denote the beginning of a commnet. All characters on this line after the hash sign is considered comments, and not executed by the interpreter.
+
+Python unfortunately doesn't have multi-line comments delimit, so you have to comment each line separately.
+
+#### 1.2.3. Docstrings
+#???
+
 
 ### 1.3. Variable Types
 
@@ -78,6 +121,8 @@ Note that sometimes interpreter may generate some intermediate files with extens
 
 #### 1.7.2. Strings
 
+A string literal is denoted by using single quotation ('), double quotation (") or triple quotation (''' or """), as long as the same type of quotes starts and ends the string.
+
 #### 1.7.3. Lists
 // slicing
 
@@ -89,6 +134,8 @@ Note that sometimes interpreter may generate some intermediate files with extens
 
 ### 1.8. Functions
 // recursion
+
+// built-in functions: input, print
 
 ### Comprehensions
 // list comprehension
